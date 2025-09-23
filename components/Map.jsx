@@ -92,7 +92,7 @@ const RegionsDisplay = () => {
 
         /* Highlight Poseidon row */
         .poseidon-row {
-          background-color: rgba(255, 255, 255, 0.07);
+          background-color: rgba(255, 255, 255, 0.3);
           font-weight: 700; /* bolder text */
         }
 
