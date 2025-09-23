@@ -3,9 +3,12 @@ import React from 'react';
 
 const RegionsDisplay = () => {
   return (
-    <section id="middle-ground" style={{ scrollMarginTop: '160px' }}>
-      {/* H1 reverted to previous style */}
-      <h1 className="mb-4 items-center title">The Middle Ground</h1>
+    <section
+      id="middle-ground"
+      style={{ scrollMarginTop: '160px', paddingTop: '120px' }} // extra top padding for breathing room
+    >
+      {/* H1 with more top margin, less bottom margin */}
+      <h1 className="title">The Middle Ground</h1>
 
       <div className="table-container">
         <table className="comparison-table">
@@ -48,13 +51,14 @@ const RegionsDisplay = () => {
       </div>
 
       <style jsx>{`
-        /* Match earlier H1 style */
         .title {
           font-family: 'Stabil Grotesk', sans-serif;
           font-size: 2rem;
           font-weight: 700;
           text-align: center;
           color: white;
+          margin-top: 40px;   /* adds extra space above heading */
+          margin-bottom: 24px; /* keeps it closer to the table */
         }
 
         .table-container {
@@ -76,23 +80,22 @@ const RegionsDisplay = () => {
           font-size: 1rem;
         }
 
-        /* Table cells */
+        /* Cells */
         .comparison-table th,
         .comparison-table td {
           padding: 16px 20px;
           border-bottom: 1px solid white;
         }
 
-        /* Header row: all caps, bold, and no top border */
+        /* Top row: uppercase, bold, top aligned, no top border */
         .comparison-table thead tr th {
           border-top: none;
           text-transform: uppercase;
           font-weight: 800;
-          position: relative;
-          vertical-align: bottom;
+          vertical-align: top; /* keep all headers top-aligned */
         }
 
-        /* Small, thin footnote directly under COST PER TON */
+        /* Footnote styling */
         .cost-footnote {
           font-size: 0.6rem;
           font-weight: 300;
@@ -100,7 +103,7 @@ const RegionsDisplay = () => {
           margin-top: 2px;
         }
 
-        /* Remove vertical lines */
+        /* Remove vertical borders */
         .comparison-table th:first-child,
         .comparison-table td:first-child {
           border-left: none;
@@ -119,6 +122,7 @@ const RegionsDisplay = () => {
         @media (max-width: 768px) {
           .title {
             font-size: 1.8rem;
+            margin-top: 30px;
           }
           .comparison-table th,
           .comparison-table td {
