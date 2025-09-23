@@ -17,6 +17,7 @@ const RegionsDisplay = () => {
               <th>SPEED</th>
               <th>
                 COST&nbsp;PER&nbsp;TON
+                {/* now lowercase */}
                 <div className="cost-footnote">*route dependent</div>
               </th>
               <th>FLEXIBILITY</th>
@@ -52,11 +53,11 @@ const RegionsDisplay = () => {
       <style jsx>{`
         .title {
           font-family: 'Stabil Grotesk', sans-serif;
-          font-size: 2.5rem;          /* larger size to match earlier style */
+          font-size: 2.8rem;
           font-weight: 700;
           text-align: center;
           color: white;
-          margin-top: 40px;
+          margin-top: 100px;
           margin-bottom: 24px;
         }
 
@@ -92,11 +93,13 @@ const RegionsDisplay = () => {
           vertical-align: top;
         }
 
+        /* lowercase footnote */
         .cost-footnote {
           font-size: 0.6rem;
           font-weight: 300;
           line-height: 0.8rem;
           margin-top: 2px;
+          text-transform: none;
         }
 
         /* remove vertical borders */
@@ -109,9 +112,8 @@ const RegionsDisplay = () => {
           border-right: none;
         }
 
-        /* Slightly stronger highlight for Poseidon Aero row */
         .poseidon-row {
-          background-color: rgba(255, 255, 255, 0.12); /* a bit brighter */
+          background-color: rgba(255, 255, 255, 0.12);
           font-weight: 700;
         }
 
