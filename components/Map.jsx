@@ -60,7 +60,7 @@ const RegionsDisplay = () => {
         /* Responsive H1 that matches global site typography */
         .title {
           text-align: center;
-          font-weight: 700;
+          font-weight: 600;
           font-size: clamp(2.25rem, 4vw, 2.8rem);
           line-height: 1.1;
           margin: 0 0 clamp(1.5rem, 3vw, 2.5rem);
@@ -95,12 +95,12 @@ const RegionsDisplay = () => {
           font-size: clamp(0.55rem, 1.4vw, 0.65rem);
           font-weight: 300;
           line-height: 1.1;
-          margin-top: 0.15rem;
+          margin-top: 0.05rem;
           text-transform: none;
         }
 
         .poseidon-row {
-          background-color: rgba(255, 255, 255, 0.7);
+          background-color: rgba(255, 255, 255, 0.3);
           font-weight: 700;
         }
 
