@@ -4,7 +4,8 @@ import React from 'react';
 const RegionsDisplay = () => {
   return (
     <section id="middle-ground" style={{ scrollMarginTop: '160px' }}>
-      <h1 className="custom-title">The Middle Ground</h1>
+      {/* H1 reverted to previous style */}
+      <h1 className="mb-4 items-center title">The Middle Ground</h1>
 
       <div className="table-container">
         <table className="comparison-table">
@@ -12,7 +13,10 @@ const RegionsDisplay = () => {
             <tr>
               <th>METHOD</th>
               <th>SPEED</th>
-              <th>COST PER TON</th>
+              <th>
+                COST&nbsp;PER&nbsp;TON
+                <div className="cost-footnote">*route dependent</div>
+              </th>
               <th>FLEXIBILITY</th>
               <th>INFRASTRUCTURE REQUIRED</th>
             </tr>
@@ -41,17 +45,14 @@ const RegionsDisplay = () => {
             </tr>
           </tbody>
         </table>
-
-        <p className="footnote">* Route dependent</p>
       </div>
 
       <style jsx>{`
-        .custom-title {
+        /* Match earlier H1 style */
+        .title {
           font-family: 'Stabil Grotesk', sans-serif;
-          font-size: 1.8rem; /* slightly smaller than default h1 */
+          font-size: 2rem;
           font-weight: 700;
-          margin-top: 80px;   /* more space above */
-          margin-bottom: 16px; /* closer to table */
           text-align: center;
           color: white;
         }
@@ -82,14 +83,24 @@ const RegionsDisplay = () => {
           border-bottom: 1px solid white;
         }
 
-        /* remove top border on first row to hide top line */
+        /* Header row: all caps, bold, and no top border */
         .comparison-table thead tr th {
           border-top: none;
           text-transform: uppercase;
-          font-weight: 800; /* slightly bolder */
+          font-weight: 800;
+          position: relative;
+          vertical-align: bottom;
         }
 
-        /* remove vertical lines */
+        /* Small, thin footnote directly under COST PER TON */
+        .cost-footnote {
+          font-size: 0.6rem;
+          font-weight: 300;
+          line-height: 0.8rem;
+          margin-top: 2px;
+        }
+
+        /* Remove vertical lines */
         .comparison-table th:first-child,
         .comparison-table td:first-child {
           border-left: none;
@@ -105,21 +116,10 @@ const RegionsDisplay = () => {
           font-weight: 700;
         }
 
-        .footnote {
-          margin-top: 20px;
-          font-size: 0.9rem;
-          color: #ccc;
-          text-align: right;
-          width: 90%;
-          max-width: 1200px;
-        }
-
         @media (max-width: 768px) {
-          .custom-title {
-            font-size: 1.5rem;
-            margin-top: 60px;
+          .title {
+            font-size: 1.8rem;
           }
-
           .comparison-table th,
           .comparison-table td {
             padding: 12px 10px;
