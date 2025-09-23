@@ -100,7 +100,7 @@ const RegionsDisplay = () => {
         }
 
         .poseidon-row {
-          background-color: rgba(255, 255, 255, 0.18);
+          background-color: rgba(255, 255, 255, 0.3);
           font-weight: 700;
         }
 
