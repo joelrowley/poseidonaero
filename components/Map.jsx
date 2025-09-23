@@ -66,13 +66,18 @@ const RegionsDisplay = () => {
           margin: 0 0 clamp(1.5rem, 3vw, 2.5rem);
         }
 
+        /* Table container with responsive horizontal scroll for small screens */
         .table-container {
           width: min(90%, 1200px);
           margin: 0 auto;
+          overflow-x: auto; /* enables horizontal scrolling if needed */
+          -webkit-overflow-scrolling: touch; /* smooth scrolling on mobile */
         }
 
+        /* Comparison table styling */
         .comparison-table {
           width: 100%;
+          min-width: 500px; /* ensures readability on tiny screens */
           border-collapse: collapse;
           font-size: clamp(0.95rem, 1.8vw, 1.05rem);
           line-height: 1.4;
@@ -114,10 +119,20 @@ const RegionsDisplay = () => {
           border-right: none;
         }
 
+        /* Mobile adjustments */
         @media (max-width: 600px) {
           .comparison-table th,
           .comparison-table td {
-            padding: 0.6rem 0.5rem;
+            padding: 0.5rem 0.4rem;
+            font-size: clamp(0.8rem, 2.5vw, 0.95rem);
+          }
+
+          .cost-footnote {
+            font-size: clamp(0.45rem, 1.2vw, 0.55rem);
+          }
+
+          .comparison-table {
+            min-width: 100%; /* table shrinks fully into the viewport if possible */
           }
         }
       `}</style>
