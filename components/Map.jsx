@@ -24,12 +24,12 @@ const RegionsDisplay = () => {
             <td>Limited routes</td>
             <td>Ports only</td>
           </tr>
-          <tr>
-            <td><strong>Poseidon Aero</strong></td>
-            <td><strong>120–150 mph</strong></td>
-            <td><strong>$1,200–1,800</strong></td>
-            <td><strong>Any waterway</strong></td>
-            <td><strong>None</strong></td>
+          <tr className="poseidon-row">
+            <td>Poseidon Aero</td>
+            <td>120–150 mph</td>
+            <td>$1,200–1,800</td>
+            <td>Any waterway</td>
+            <td>None</td>
           </tr>
           <tr>
             <td>Air Freight</td>
@@ -71,17 +71,29 @@ const RegionsDisplay = () => {
 
         .comparison-table th,
         .comparison-table td {
-          border: 1px solid white;
           padding: 16px 20px;
+          border-top: 1px solid white;
+          border-bottom: 1px solid white;
+        }
+
+        /* Remove vertical lines */
+        .comparison-table th:first-child,
+        .comparison-table td:first-child {
+          border-left: none;
+        }
+        .comparison-table th:last-child,
+        .comparison-table td:last-child {
+          border-right: none;
         }
 
         .comparison-table th {
-          background: transparent;
           font-weight: 600;
         }
 
-        .comparison-table tbody tr:nth-child(2) td {
-          font-weight: 600; /* Poseidon row bold */
+        /* Highlight Poseidon row */
+        .poseidon-row {
+          background-color: rgba(255, 255, 255, 0.07);
+          font-weight: 700; /* bolder text */
         }
 
         .footnote {
