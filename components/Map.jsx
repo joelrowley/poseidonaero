@@ -4,7 +4,7 @@ import React from 'react';
 const RegionsDisplay = () => {
   return (
     <div className="table-container">
-      <h1 className="title">Transportation Method Comparison</h1>
+      <h1 className="mb-4 items-center title">The Middle Ground</h1>
 
       <table className="comparison-table">
         <thead>
