@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 
 const products = [
-  { name: 'Heron', image: '/heron.png', stats: ['Wingspan: 50ft', 'Range: 1500 miles', 'Payload: 2T'] },
+  { name: 'Heron', image: '/heron.png', stats: ['Wingspan: 50ft', 'Range: 1500 miles', 'Payload: 1.6T'] },
   { name: 'Seagull', image: '/seagull.png', stats: ['Wingspan: 13ft', 'Range: 120 miles', 'Payload: 45 lb'] },
 ]
 
