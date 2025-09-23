@@ -4,17 +4,17 @@ import React from 'react';
 const RegionsDisplay = () => {
   return (
     <section id="middle-ground" style={{ scrollMarginTop: '160px' }}>
-      <h1 className="mb-4 items-center title">The Middle Ground</h1>
+      <h1 className="custom-title">The Middle Ground</h1>
 
       <div className="table-container">
         <table className="comparison-table">
           <thead>
             <tr>
-              <th>Method</th>
-              <th>Speed</th>
-              <th>Cost per Ton</th>
-              <th>Flexibility</th>
-              <th>Infrastructure Required</th>
+              <th>METHOD</th>
+              <th>SPEED</th>
+              <th>COST PER TON</th>
+              <th>FLEXIBILITY</th>
+              <th>INFRASTRUCTURE REQUIRED</th>
             </tr>
           </thead>
           <tbody>
@@ -46,9 +46,19 @@ const RegionsDisplay = () => {
       </div>
 
       <style jsx>{`
+        .custom-title {
+          font-family: 'Stabil Grotesk', sans-serif;
+          font-size: 1.8rem; /* slightly smaller than default h1 */
+          font-weight: 700;
+          margin-top: 80px;   /* more space above */
+          margin-bottom: 16px; /* closer to table */
+          text-align: center;
+          color: white;
+        }
+
         .table-container {
           width: 100%;
-          padding: 100px 0;
+          padding: 0 0 100px;
           background-color: #000;
           color: white;
           font-family: 'Stabil Grotesk', sans-serif;
@@ -65,11 +75,18 @@ const RegionsDisplay = () => {
           font-size: 1rem;
         }
 
+        /* Table cells */
         .comparison-table th,
         .comparison-table td {
           padding: 16px 20px;
-          border-top: 1px solid white;
           border-bottom: 1px solid white;
+        }
+
+        /* remove top border on first row to hide top line */
+        .comparison-table thead tr th {
+          border-top: none;
+          text-transform: uppercase;
+          font-weight: 800; /* slightly bolder */
         }
 
         /* remove vertical lines */
@@ -82,13 +99,9 @@ const RegionsDisplay = () => {
           border-right: none;
         }
 
-        .comparison-table th {
-          font-weight: 600;
-        }
-
         /* Highlight Poseidon row */
         .poseidon-row {
-          background-color: rgba(255, 255, 255, 0.15);
+          background-color: rgba(255, 255, 255, 0.07);
           font-weight: 700;
         }
 
@@ -102,6 +115,11 @@ const RegionsDisplay = () => {
         }
 
         @media (max-width: 768px) {
+          .custom-title {
+            font-size: 1.5rem;
+            margin-top: 60px;
+          }
+
           .comparison-table th,
           .comparison-table td {
             padding: 12px 10px;
