@@ -5,9 +5,8 @@ const RegionsDisplay = () => {
   return (
     <section
       id="middle-ground"
-      style={{ scrollMarginTop: '160px', paddingTop: '120px' }} // extra top padding for breathing room
+      style={{ scrollMarginTop: '160px', paddingTop: '120px' }}
     >
-      {/* H1 with more top margin, less bottom margin */}
       <h1 className="title">The Middle Ground</h1>
 
       <div className="table-container">
@@ -53,12 +52,12 @@ const RegionsDisplay = () => {
       <style jsx>{`
         .title {
           font-family: 'Stabil Grotesk', sans-serif;
-          font-size: 2rem;
+          font-size: 2.5rem;          /* larger size to match earlier style */
           font-weight: 700;
           text-align: center;
           color: white;
-          margin-top: 40px;   /* adds extra space above heading */
-          margin-bottom: 24px; /* keeps it closer to the table */
+          margin-top: 40px;
+          margin-bottom: 24px;
         }
 
         .table-container {
@@ -80,22 +79,19 @@ const RegionsDisplay = () => {
           font-size: 1rem;
         }
 
-        /* Cells */
         .comparison-table th,
         .comparison-table td {
           padding: 16px 20px;
           border-bottom: 1px solid white;
         }
 
-        /* Top row: uppercase, bold, top aligned, no top border */
         .comparison-table thead tr th {
           border-top: none;
           text-transform: uppercase;
           font-weight: 800;
-          vertical-align: top; /* keep all headers top-aligned */
+          vertical-align: top;
         }
 
-        /* Footnote styling */
         .cost-footnote {
           font-size: 0.6rem;
           font-weight: 300;
@@ -103,7 +99,7 @@ const RegionsDisplay = () => {
           margin-top: 2px;
         }
 
-        /* Remove vertical borders */
+        /* remove vertical borders */
         .comparison-table th:first-child,
         .comparison-table td:first-child {
           border-left: none;
@@ -113,15 +109,15 @@ const RegionsDisplay = () => {
           border-right: none;
         }
 
-        /* Highlight Poseidon row */
+        /* Slightly stronger highlight for Poseidon Aero row */
         .poseidon-row {
-          background-color: rgba(255, 255, 255, 0.07);
+          background-color: rgba(255, 255, 255, 0.12); /* a bit brighter */
           font-weight: 700;
         }
 
         @media (max-width: 768px) {
           .title {
-            font-size: 1.8rem;
+            font-size: 2.1rem;
             margin-top: 30px;
           }
           .comparison-table th,
