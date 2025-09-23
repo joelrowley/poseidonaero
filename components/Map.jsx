@@ -51,7 +51,7 @@ const RegionsDisplay = () => {
         .middle-ground-section {
           scroll-margin-top: 10rem;
           padding-top: clamp(6rem, 8vw, 10rem);
-          padding-bottom: clamp(4rem, 6vw, 8rem);
+          padding-bottom: clamp(8rem, 6vw, 12rem);
           background: #000;
           color: #fff;
           font-family: 'Stabil Grotesk', sans-serif;
@@ -103,7 +103,7 @@ const RegionsDisplay = () => {
         }
 
         .poseidon-row {
-          background-color: rgba(255, 255, 255, 0.8);
+          background-color: rgba(255, 255, 255, 0.2);
           font-weight: 700;
         }
 
