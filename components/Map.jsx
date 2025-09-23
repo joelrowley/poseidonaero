@@ -88,7 +88,7 @@ const RegionsDisplay = () => {
 
         /* Highlight Poseidon row */
         .poseidon-row {
-          background-color: rgba(255, 255, 255, 0.3);
+          background-color: rgba(255, 255, 255, 0.15);
           font-weight: 700;
         }
 
