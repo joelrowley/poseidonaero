@@ -60,8 +60,8 @@ const RegionsDisplay = () => {
         /* Responsive H1 that matches global site typography */
         .title {
           text-align: center;
-          font-weight: 400;
-          font-size: clamp(2.25rem, 4vw, 2.8rem);
+          font-weight: 500;
+          font-size: clamp(2.25rem, 4vw, 3.3rem);
           line-height: 1.1;
           margin: 0 0 clamp(1.5rem, 3vw, 2.5rem);
         }
