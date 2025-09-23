@@ -3,10 +3,7 @@ import React from 'react';
 
 const RegionsDisplay = () => {
   return (
-    <section
-      id="middle-ground"
-      style={{ scrollMarginTop: '160px', paddingTop: '120px' }}
-    >
+    <section id="middle-ground" className="middle-ground-section">
       <h1 className="title">The Middle Ground</h1>
 
       <div className="table-container">
@@ -17,7 +14,6 @@ const RegionsDisplay = () => {
               <th>SPEED</th>
               <th>
                 COST&nbsp;PER&nbsp;TON
-                {/* now lowercase */}
                 <div className="cost-footnote">*route dependent</div>
               </th>
               <th>FLEXIBILITY</th>
@@ -51,58 +47,64 @@ const RegionsDisplay = () => {
       </div>
 
       <style jsx>{`
-        .title {
+        /* Section spacing integrates with global rhythm */
+        .middle-ground-section {
+          scroll-margin-top: 10rem;
+          padding-top: clamp(6rem, 8vw, 10rem);
+          padding-bottom: clamp(4rem, 6vw, 8rem);
+          background: #000;
+          color: #fff;
           font-family: 'Stabil Grotesk', sans-serif;
-          font-size: 3rem;
-          font-weight: 500;
+        }
+
+        /* Responsive H1 that matches global site typography */
+        .title {
           text-align: center;
-          color: white;
-          margin-top: 100px;
-          margin-bottom: 24px;
+          font-weight: 700;
+          font-size: clamp(2.25rem, 4vw, 2.8rem);
+          line-height: 1.1;
+          margin: 0 0 clamp(1.5rem, 3vw, 2.5rem);
         }
 
         .table-container {
-          width: 100%;
-          padding: 0 0 100px;
-          background-color: #000;
-          color: white;
-          font-family: 'Stabil Grotesk', sans-serif;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
+          width: min(90%, 1200px);
+          margin: 0 auto;
         }
 
         .comparison-table {
-          width: 90%;
-          max-width: 1200px;
+          width: 100%;
           border-collapse: collapse;
-          text-align: left;
-          font-size: 1rem;
+          font-size: clamp(0.95rem, 1.8vw, 1.05rem);
+          line-height: 1.4;
         }
 
         .comparison-table th,
         .comparison-table td {
-          padding: 16px 20px;
+          padding: clamp(0.75rem, 1.5vw, 1rem) clamp(1rem, 2vw, 1.25rem);
           border-bottom: 1px solid white;
+          text-align: left;
         }
 
-        .comparison-table thead tr th {
-          border-top: none;
+        .comparison-table thead th {
           text-transform: uppercase;
           font-weight: 800;
           vertical-align: top;
         }
 
-        /* lowercase footnote */
         .cost-footnote {
-          font-size: 0.6rem;
+          font-size: clamp(0.55rem, 1.4vw, 0.65rem);
           font-weight: 300;
-          line-height: 0.8rem;
-          margin-top: 2px;
+          line-height: 1.1;
+          margin-top: 0.15rem;
           text-transform: none;
         }
 
-        /* remove vertical borders */
+        .poseidon-row {
+          background-color: rgba(255, 255, 255, 0.12);
+          font-weight: 700;
+        }
+
+        /* Remove unnecessary vertical borders for clean lines */
         .comparison-table th:first-child,
         .comparison-table td:first-child {
           border-left: none;
@@ -112,20 +114,10 @@ const RegionsDisplay = () => {
           border-right: none;
         }
 
-        .poseidon-row {
-          background-color: rgba(255, 255, 255, 0.12);
-          font-weight: 700;
-        }
-
-        @media (max-width: 768px) {
-          .title {
-            font-size: 2.1rem;
-            margin-top: 30px;
-          }
+        @media (max-width: 600px) {
           .comparison-table th,
           .comparison-table td {
-            padding: 12px 10px;
-            font-size: 0.9rem;
+            padding: 0.6rem 0.5rem;
           }
         }
       `}</style>
