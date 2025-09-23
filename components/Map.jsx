@@ -53,8 +53,8 @@ const RegionsDisplay = () => {
       <style jsx>{`
         .title {
           font-family: 'Stabil Grotesk', sans-serif;
-          font-size: 2.8rem;
-          font-weight: 700;
+          font-size: 3rem;
+          font-weight: 500;
           text-align: center;
           color: white;
           margin-top: 100px;
