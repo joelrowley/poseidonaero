@@ -60,31 +60,30 @@ const RegionsDisplay = () => {
         /* Responsive H1 that matches global site typography */
         .title {
           text-align: center;
-          font-size: clamp(2.25rem, 4vw, 3.2rem);
           line-height: 1.1;
           margin: 0 0 clamp(1.5rem, 3vw, 2.5rem);
         }
 
-        /* Table container with responsive horizontal scroll for small screens */
+        /* Table container with horizontal scroll for small screens */
         .table-container {
           width: min(90%, 1200px);
           margin: 0 auto;
-          overflow-x: auto; /* enables horizontal scrolling if needed */
-          -webkit-overflow-scrolling: touch; /* smooth scrolling on mobile */
+          overflow-x: auto; /* horizontal scroll if table too wide */
+          -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
         }
 
         /* Comparison table styling */
         .comparison-table {
           width: 100%;
-          min-width: 500px; /* ensures readability on tiny screens */
+          min-width: 600px; /* keeps table readable on mobile */
           border-collapse: collapse;
           font-size: clamp(0.95rem, 1.8vw, 1.05rem);
-          line-height: 1.4;
+          line-height: 1.5;
         }
 
         .comparison-table th,
         .comparison-table td {
-          padding: clamp(0.75rem, 1.5vw, 1rem) clamp(1rem, 2vw, 1.25rem);
+          padding: clamp(0.75rem, 1.5vw, 1rem) clamp(1rem, 2vw, 1.5rem); /* increased padding */
           border-bottom: 1px solid white;
           text-align: left;
         }
@@ -96,15 +95,15 @@ const RegionsDisplay = () => {
         }
 
         .cost-footnote {
-          font-size: clamp(0.55rem, 1.4vw, 0.65rem);
+          font-size: clamp(0.55rem, 1.4vw, 0.7rem); /* slightly larger footnote */
           font-weight: 300;
-          line-height: 1.1;
+          line-height: 1.2;
           margin-top: 0.05rem;
           text-transform: none;
         }
 
         .poseidon-row {
-          background-color: rgba(255, 255, 255, 0.2);
+          background-color: rgba(255, 255, 255, 0.8);
           font-weight: 700;
         }
 
@@ -118,20 +117,20 @@ const RegionsDisplay = () => {
           border-right: none;
         }
 
-        /* Mobile adjustments */
+        /* Mobile adjustments for larger spacing and font */
         @media (max-width: 600px) {
+          .comparison-table {
+            min-width: 100%; /* shrink fully into viewport if needed */
+            font-size: clamp(1rem, 3vw, 1.1rem); /* larger font for mobile */
+          }
+
           .comparison-table th,
           .comparison-table td {
-            padding: 0.5rem 0.4rem;
-            font-size: clamp(0.8rem, 2.5vw, 0.95rem);
+            padding: 0.8rem 0.75rem; /* increased spacing */
           }
 
           .cost-footnote {
-            font-size: clamp(0.45rem, 1.2vw, 0.55rem);
-          }
-
-          .comparison-table {
-            min-width: 100%; /* table shrinks fully into the viewport if possible */
+            font-size: clamp(0.5rem, 1.4vw, 0.65rem);
           }
         }
       `}</style>
