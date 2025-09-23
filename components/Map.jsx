@@ -3,45 +3,47 @@ import React from 'react';
 
 const RegionsDisplay = () => {
   return (
-    <div className="table-container">
+    <section id="middle-ground" style={{ scrollMarginTop: '160px' }}>
       <h1 className="mb-4 items-center title">The Middle Ground</h1>
 
-      <table className="comparison-table">
-        <thead>
-          <tr>
-            <th>Method</th>
-            <th>Speed</th>
-            <th>Cost per Ton</th>
-            <th>Flexibility</th>
-            <th>Infrastructure Required</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Ocean Freight</td>
-            <td>15–25 mph</td>
-            <td>$500–800</td>
-            <td>Limited routes</td>
-            <td>Ports only</td>
-          </tr>
-          <tr className="poseidon-row">
-            <td>Poseidon Aero</td>
-            <td>120–150 mph</td>
-            <td>$1,200–1,800</td>
-            <td>Any waterway</td>
-            <td>None</td>
-          </tr>
-          <tr>
-            <td>Air Freight</td>
-            <td>500+ mph</td>
-            <td>$3,000–6,000</td>
-            <td>Airport dependent</td>
-            <td>Airports required</td>
-          </tr>
-        </tbody>
-      </table>
+      <div className="table-container">
+        <table className="comparison-table">
+          <thead>
+            <tr>
+              <th>Method</th>
+              <th>Speed</th>
+              <th>Cost per Ton</th>
+              <th>Flexibility</th>
+              <th>Infrastructure Required</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ocean Freight</td>
+              <td>15–25 mph</td>
+              <td>$500–800</td>
+              <td>Limited routes</td>
+              <td>Ports only</td>
+            </tr>
+            <tr className="poseidon-row">
+              <td>Poseidon Aero</td>
+              <td>120–150 mph</td>
+              <td>$1,200–1,800</td>
+              <td>Any waterway</td>
+              <td>None</td>
+            </tr>
+            <tr>
+              <td>Air Freight</td>
+              <td>500+ mph</td>
+              <td>$3,000–6,000</td>
+              <td>Airport dependent</td>
+              <td>Airports required</td>
+            </tr>
+          </tbody>
+        </table>
 
-      <p className="footnote">* Route dependent</p>
+        <p className="footnote">* Route dependent</p>
+      </div>
 
       <style jsx>{`
         .table-container {
@@ -53,12 +55,6 @@ const RegionsDisplay = () => {
           display: flex;
           flex-direction: column;
           align-items: center;
-        }
-
-        .title {
-          font-size: 2rem;
-          margin-bottom: 40px;
-          text-align: center;
         }
 
         .comparison-table {
@@ -76,7 +72,7 @@ const RegionsDisplay = () => {
           border-bottom: 1px solid white;
         }
 
-        /* Remove vertical lines */
+        /* remove vertical lines */
         .comparison-table th:first-child,
         .comparison-table td:first-child {
           border-left: none;
@@ -93,7 +89,7 @@ const RegionsDisplay = () => {
         /* Highlight Poseidon row */
         .poseidon-row {
           background-color: rgba(255, 255, 255, 0.3);
-          font-weight: 700; /* bolder text */
+          font-weight: 700;
         }
 
         .footnote {
@@ -113,7 +109,7 @@ const RegionsDisplay = () => {
           }
         }
       `}</style>
-    </div>
+    </section>
   );
 };
 
