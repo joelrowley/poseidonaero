@@ -31,7 +31,7 @@ export default function Navbar() {
         </Link>
         
         <Link href="https://www.linkedin.com/company/poseidon-aerospace/jobs/" legacyBehavior>
-          <a className="nav-link">Careers</a>
+          <a className="nav-link" target="_blank" rel="noopener noreferrer"> Careers </a>
         </Link>
       </div>
       
