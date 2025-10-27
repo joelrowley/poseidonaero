@@ -30,7 +30,7 @@ export default function Navbar() {
           <a className="nav-link products-link">Products</a>
         </Link>
         
-        <Link href="https://www.careers-page.com/poseidon-aerospace" legacyBehavior>
+        <Link href="https://www.linkedin.com/company/poseidon-aerospace/jobs/" legacyBehavior>
           <a className="nav-link">Careers</a>
         </Link>
       </div>
